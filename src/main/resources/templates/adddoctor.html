@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+    <form th:action="@{/adddoctor}" th:object="@{doctor}" method="POST">
+        <p>Name <input type="text" name="name"/> </p>
+        <p>Qualification <input type="text" name="qualification" /> </p>
+        <p>Department <input type="text" name="department" /> </p>
+        <p>Fees <input type="number" name="fees" /> </p>
+        <p>Phone <input type="number" name="phone" /> </p>
+        <p><input type="submit" value="Add Doctor"></p>
+    </form>
 </body>
 </html>

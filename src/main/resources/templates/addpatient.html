@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<form th:action="@{/addpatient}" th:object="@{patient}" method="POST">
+    <p>Name <input type="text" name="name"/> </p>
+    <p>DOB <input type="date" name="dob" /> </p>
+    <p>Blood Group <input type="text" name="blood" /> </p>
+    <p>Phone <input type="number" name="phone" /> </p>
+    <p><input type="submit" value="Add Patient"></p>
+</form>
 </body>
 </html>

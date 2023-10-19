@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
-
+<form th:action="@{/addappointment}" th:object="@{appointment}" method="POST">
+    <p>Patient ID <input type="number" name="pid"/> </p>
+    <p>Doctor ID <input type="number" name="did" /> </p>
+    <p>Illness <input type="text" name="illness" /> </p>
+    <p>Date <input type="date" name="date" /> </p>
+    <p>Mode <input type="text" name="mode" /> </p>
+    <p><input type="submit" value="Add Appointment"></p>
+</form>
 </body>
 </html>
