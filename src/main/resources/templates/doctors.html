@@ -6,9 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <div th:each="doctor:${doctors}">
-            <li> <a th:text="${doctor.name}" th:href="@{}" style="color:white;">Doctorname</a></li></div>
-    </ul>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="doctor : ${doctors}">
+        <th th:text="${doctor.name}">1</th>
+        <th th:text="${doctor.qualification}">1</th>
+        <th th:text="${doctor.department}">1</th>
+        <th th:text="${doctor.phone}">1</th>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
