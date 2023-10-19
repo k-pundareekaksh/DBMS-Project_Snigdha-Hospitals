@@ -15,11 +15,12 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="patient : ${patients}">
-        <th th:text="${patient.name}">1</th>
-        <th th:text="${patient.dob}">1</th>
-        <th th:text="${patient.blood}">1</th>
-        <th th:text="${patient.phone}">1</th>
+    <tr th:each="appointment : ${appointments}">
+        <th th:text="${appointment.id}">1</th>
+        <th th:text="${appointment.pid}">1</th>
+        <th th:text="${appointment.did}">1</th>
+        <th th:text="${appointment.date}">1</th>
+        <th th:text="${appointment.mode}">1</th>
     </tr>
     </tbody>
 </table>
