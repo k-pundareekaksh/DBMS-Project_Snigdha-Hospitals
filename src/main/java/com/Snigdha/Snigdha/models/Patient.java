@@ -36,11 +36,11 @@ public class Patient {
         this.patientBlood = patientBlood;
     }
 
-    public String getPatientPhone() {
+    public Long getPatientPhone() {
         return patientPhone;
     }
 
-    public void setPatientPhone(String patientPhone) {
+    public void setPatientPhone(Long patientPhone) {
         this.patientPhone = patientPhone;
     }
 
@@ -48,5 +48,13 @@ public class Patient {
     private String patientName;
     private Date patientDob;
     private String patientBlood;
-    private String patientPhone;
+    private Long patientPhone;
+
+    public Patient(int id,String name,Date dob,String blood,Long phone){
+        this.patientId=id;
+        this.patientName=name;
+        this.patientDob=dob;
+        this.patientBlood=blood;
+        this.patientPhone=phone;
+    }
 }

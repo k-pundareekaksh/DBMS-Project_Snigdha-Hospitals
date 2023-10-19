@@ -5,6 +5,9 @@ public class Doctor {
     private int doctorId;
     private String doctorName;
     private String doctorQualification;
+    private String doctorDepartment;
+    private int doctorFees;
+    private long doctorPhone;
 
     public int getDoctorId() {
         return doctorId;
@@ -54,8 +57,15 @@ public class Doctor {
         this.doctorPhone = doctorPhone;
     }
 
-    private String doctorDepartment;
-    private int doctorFees;
-    private long doctorPhone;
+    public Doctor(int id,String name,String qualification,String department,int fees,long phone){
+        this.doctorId=id;
+        this.doctorName=name;
+        this.doctorQualification=qualification;
+        this.doctorDepartment=department;
+        this.doctorFees=fees;
+        this.doctorPhone=phone;
+    };
+
+
 
 }
