@@ -2,7 +2,6 @@ package com.Snigdha.Snigdha.controller;
 
 import com.Snigdha.Snigdha.dao.AppointmentRepository;
 import com.Snigdha.Snigdha.models.Appointment;
-import com.Snigdha.Snigdha.models.Doctor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class AppointmentController {
 
     @Autowired
-    JdbcTemplate jdbcTemplate
+    JdbcTemplate jdbcTemplate;
 
     @Autowired
     private AppointmentRepository appointmentRepository;
