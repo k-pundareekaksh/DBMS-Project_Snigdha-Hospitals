@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-
+    <ul>
+        <div th:each="doctor:${doctors}">
+            <li> <a th:text="${doctor.name}" th:href="@{}" style="color:white;">Doctorname</a></li></div>
+    </ul>
 </body>
 </html>
