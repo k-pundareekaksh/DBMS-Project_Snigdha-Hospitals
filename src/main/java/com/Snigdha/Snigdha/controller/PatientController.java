@@ -4,8 +4,11 @@ import com.Snigdha.Snigdha.dao.PatientRepository;
 import com.Snigdha.Snigdha.models.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class PatientController {
@@ -17,7 +20,9 @@ public class PatientController {
 
 
     @GetMapping("/patients")
-    public String getPatients(){
+    public String getPatients(Model model){
+        List<Patient> patients =  patientRepository.projectPatients();
+        model.addAttribute("patient",patients);
         return "patients";
     }
 
