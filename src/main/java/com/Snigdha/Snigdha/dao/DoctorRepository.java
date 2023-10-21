@@ -22,10 +22,14 @@ public class DoctorRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-
+    
+    public void createDoctorTable(){
+        String sql_query = "CREATE TABLE IF NOT EXISTS doctor (id int AUTO_INCREMENT,doctorname varchar(30),qualification varchar(10),department varchar(20),fees int,phone bigint,PRIMARY KEY(id))";
+        jdbcTemplate.update(sql_query);
+    }
 
     public List<Doctor>  projectDoctors(){
-        String sql_query = "SELECT * FROM doctors";
+        String sql_query = "SELECT * FROM doctor";
         return jdbcTemplate.query(sql_query,new BeanPropertyRowMapper<>(Doctor.class));
     }
 

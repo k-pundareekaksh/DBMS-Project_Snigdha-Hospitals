@@ -21,9 +21,15 @@ public class PatientController {
 
     @GetMapping("/patients")
     public String getPatients(Model model){
+        patientRepository.createPatientTable();
         List<Patient> patients =  patientRepository.projectPatients();
         model.addAttribute("patient",patients);
         return "patients";
+    }
+
+    @GetMapping("/addpatient")
+    public String addPatientget(){
+        return "addpatient";
     }
 
     @PostMapping("/addpatient")

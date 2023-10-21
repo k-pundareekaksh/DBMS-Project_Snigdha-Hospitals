@@ -16,8 +16,13 @@ public class PatientRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
+    public void createPatientTable(){
+        String sql_query = "CREATE TABLE IF NOT EXISTS patient (id int AUTO_INCREMENT,patientname varchar(30),dob date,blood varchar(10),phone bigint,PRIMARY KEY(id))";
+        jdbcTemplate.update(sql_query);
+    }
+
     public List<Patient> projectPatients(){
-        String sql_query = "SELECT * FROM patients";
+        String sql_query = "SELECT * FROM patient";
         return jdbcTemplate.query(sql_query,new BeanPropertyRowMapper<>(Patient.class));
 
     }

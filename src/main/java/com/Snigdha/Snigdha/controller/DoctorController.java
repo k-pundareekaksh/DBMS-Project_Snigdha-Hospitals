@@ -20,7 +20,9 @@ private DoctorRepository doctorRepository;
 
     @GetMapping("/doctors")
     public String getDoctors(Model model){
+        doctorRepository.createDoctorTable();
         List<Doctor> doctors =  doctorRepository.projectDoctors();
+        System.out.println(doctors);
         model.addAttribute("doctors",doctors);
         return "doctors";
     }
