@@ -7,14 +7,21 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
 
 @Service
 @Repository
 public class DoctorRepository {
 
-    @Autowired
-    JdbcTemplate jdbcTemplate;
+//    @Autowired
+//    JdbcTemplate jdbcTemplate;
+
+    private final JdbcTemplate jdbcTemplate;
+    public DoctorRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
 
 
     public List<Doctor>  projectDoctors(){

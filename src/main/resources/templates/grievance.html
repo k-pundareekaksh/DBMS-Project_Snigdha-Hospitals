@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grievance Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navflex">
+
+    <div class="title"><a class="navitems" href="./home">Snighda</a></div>
+
+    <div class="navi">
+        <a class="navitems" href="./doctors">Doctors</a>
+        <a class="navitems" href="./patients">Patients</a>
+        <a class="navitems" href="./appointments">Appointments</a>
+    </div>
+
+</nav>
+<div class="view">
+    <!-- Add the image to the left side of the webpage -->
+    <img src="/Users/adityauppuluri/Downloads/WhatsApp Image 2023-08-09 at 12.34.47 AM.jpeg" alt="Your Image">
+</div>
+
+<div class="container" style="padding: 30px;">
+    <div class="row">
+        <div class="col-md-8 mx-auto"> <!-- Use mx-auto to center the content -->
+            <h1 class="text-center my-5 font-weight-bold">Grievance Portal</h1>
+            <hr class="bg-white">
+            <h6 class="text-center">Please fill in the following information</h6>
+            <h3 class="mt-4 text-center">How would you rate your overall experience?</h3>
+
+            <!-- Your existing form content goes here -->
+            <form>
+                <div class="text-center"> <!-- Center the buttons -->
+                    <label class="radio-inline"><input type="radio" name="experience" value="bad">Bad</label>
+                    <label class="radio-inline"><input type="radio" name="experience" value="average">Average</label>
+                    <label class="radio-inline"><input type="radio" name="experience" value="good">Good</label>
+                </div>
+
+                <br>
+
+                <h6 class="text-center">Please select cause(s) of grievance: </h6>
+
+                <div class="d-flex justify-content-center flex-wrap mt-3"> <!-- Center and wrap the checkboxes with spacing -->
+                    <label class="checkbox-inline mr-3"><input type="checkbox" name="Concern(s)" value="employee-related">Employees</label>
+                    <label class="checkbox-inline mr-3"><input type="checkbox" name="Concern(s)" value="location-related">Location</label>
+                    <label class="checkbox-inline mr-3"><input type="checkbox" name="Concern(s)" value="environment-related">Environment</label>
+                    <label class="checkbox-inline mr-3"><input type="checkbox" name="Concern(s)" value="billing-related">Billing</label>
+                    <label class="checkbox-inline mr-3"><input type="checkbox" name="Concern(s)" value="communication-related">Communication</label>
+                    <label class="checkbox-inline mr-3"><input type="checkbox" name="Concern(s)" value="appointment-related">Appointment</label>
+                    <label class="checkbox-inline mr-3"><input type="checkbox" name="Concern(s)" value="other">Other</label>
+                </div>
+
+                <br>
+
+                <div class="row mt-3"> <!-- Add margin between form rows -->
+                    <div class="col-md-2"></div>
+                    <label class="col-md-4">Full Name* <br>
+                        <input type="text" id="text" required placeholder="John Doe">
+                    </label> <br>
+
+                    <label class="col-md-4">Email* <br>
+                        <input type="text" id="text" required placeholder="xyz@gmail.com">
+                    </label> <br>
+                </div>
+
+                <div class="row mt-3"> <!-- Add margin between form rows -->
+                    <div class="col-md-2"></div>
+                    <label class="col-md-4">Age* <br>
+                        <input type="text" id="text" required placeholder="25">
+                    </label>
+                    <br>
+
+                    <label class="col-md-4">Phone Number* <br>
+                        <input type="text" id="text" required placeholder="9100052966">
+                    </label>
+                    <br>
+                </div>
+
+                <div class="row mt-3"> <!-- Add margin between form rows -->
+                    <div class="col-md-2"></div>
+                    <label class="col-md-4">Remarks <br>
+                        <textarea id="message" required placeholder="Please give a detailed feedback" cols="48" rows="5"></textarea>
+                    </label><br>
+                </div>
+
+                <div class="row mt-3"> <!-- Add margin between form rows -->
+                    <div class="col-md-2"></div>
+                    <button class="btn btn-primary" style="width: 53.5%;">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Thank you message -->
+    <div class="row mt-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-center">
+            <p class="medium-text">
+                Thank you for filling out this form! We value your feedback and apologize for any inconvenience caused. Our team is committed to resolving your concerns and providing the best service possible. If you have any additional comments or questions, please don't hesitate to reach out to us. Thank you for choosing our hospital.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
