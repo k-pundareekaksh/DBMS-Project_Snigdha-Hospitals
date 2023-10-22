@@ -17,22 +17,20 @@ import java.util.List;
 @Controller
 public class DoctorController {
 
-@Autowired
-private DoctorRepository doctorRepository;
+    @Autowired
+    private DoctorRepository doctorRepository;
 
 
     @RequestMapping(path = "/doctors",method={RequestMethod.GET})
     public String getDoctors(Model model){
         doctorRepository.createDoctorTable();
         List<Doctor> doctors =  doctorRepository.projectDoctors();
-        System.out.println(doctors);
         model.addAttribute("doctors",doctors);
         return "doctors";
     }
 
     @GetMapping("/adddoctor")
     public String addDoctors(Model model){
-        System.out.println("hihi");
         List <Doctor> doctors = doctorRepository.projectDoctors();
         model.addAttribute("doctor",doctors);
         return "adddoctor";
@@ -40,7 +38,6 @@ private DoctorRepository doctorRepository;
 
     @RequestMapping(value = "/adddoctors",method = RequestMethod.POST)
     public String addDoctor(Doctor doctor){
-        System.out.println("hi");
         doctorRepository.createDoctor(doctor);
         return "success";
     }

@@ -29,7 +29,7 @@ public class PatientController {
         return "patients";
     }
 
-    @GetMapping("/addpatient")
+    @RequestMapping(value = "/addpatient",method = RequestMethod.GET)
     public String addPatientget(Model model){
         List<Patient> patients = patientRepository.projectPatients();
         model.addAttribute("patient", patients);

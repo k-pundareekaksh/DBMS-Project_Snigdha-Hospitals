@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<form th:action="@{/addappointment}" th:object="@{appointment}" method="POST">
+<form th:action="@{/addappointment}" th:object="${appointment}" method="POST">
     <p>Patient ID <input type="number" name="pid"/> </p>
     <p>Doctor ID <input type="number" name="did" /> </p>
     <p>Illness <input type="text" name="illness" /> </p>
