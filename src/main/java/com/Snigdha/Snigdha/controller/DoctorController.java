@@ -4,10 +4,13 @@ package com.Snigdha.Snigdha.controller;
 import com.Snigdha.Snigdha.dao.DoctorRepository;
 import com.Snigdha.Snigdha.models.Doctor;
 import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -18,7 +21,7 @@ public class DoctorController {
 private DoctorRepository doctorRepository;
 
 
-    @GetMapping("/doctors")
+    @RequestMapping(path = "/doctors",method={RequestMethod.GET})
     public String getDoctors(Model model){
         doctorRepository.createDoctorTable();
         List<Doctor> doctors =  doctorRepository.projectDoctors();
@@ -28,12 +31,16 @@ private DoctorRepository doctorRepository;
     }
 
     @GetMapping("/adddoctor")
-    public String addDoctors(){
+    public String addDoctors(Model model){
+        System.out.println("hihi");
+        List <Doctor> doctors = doctorRepository.projectDoctors();
+        model.addAttribute("doctor",doctors);
         return "adddoctor";
     }
 
-    @PostMapping("/adddoctors")
+    @RequestMapping(value = "/adddoctors",method = RequestMethod.POST)
     public String addDoctor(Doctor doctor){
+        System.out.println("hi");
         doctorRepository.createDoctor(doctor);
         return "success";
     }

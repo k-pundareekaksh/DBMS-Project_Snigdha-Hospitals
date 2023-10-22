@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -28,11 +30,13 @@ public class PatientController {
     }
 
     @GetMapping("/addpatient")
-    public String addPatientget(){
+    public String addPatientget(Model model){
+        List<Patient> patients = patientRepository.projectPatients();
+        model.addAttribute("patient", patients);
         return "addpatient";
     }
 
-    @PostMapping("/addpatient")
+    @RequestMapping(value = "/addpatient",method = RequestMethod.POST)
     public String addPatient(Patient patient){
         patientRepository.createPatient(patient);
         return "success";
