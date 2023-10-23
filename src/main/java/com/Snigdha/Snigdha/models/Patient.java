@@ -57,4 +57,9 @@ public class Patient {
         this.patientBlood=blood;
         this.patientPhone=phone;
     }
+
+    @Override
+    public String toString() {
+        return "Patient [patientId=" + patientId + ", patientName=" + patientName + ", patientDob=" + patientDob + ", patientBlood=" + patientBlood + ", patientPhone=" + patientPhone + "]";
+    }
 }

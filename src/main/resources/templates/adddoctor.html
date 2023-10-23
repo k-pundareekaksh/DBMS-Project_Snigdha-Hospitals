@@ -7,6 +7,7 @@
 <body>
     <form th:action="@{/adddoctor}" th:object="${doctor}" method="POST">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+        <p>Unique ID : <input type="number" name="id"/> </p>
         <p>Name <input type="text" name="name"/> </p>
         <p>Qualification <input type="text" name="qualification" /> </p>
         <p>Department <input type="text" name="department" /> </p>

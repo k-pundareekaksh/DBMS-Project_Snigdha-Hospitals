@@ -34,9 +34,8 @@ public class DoctorRepository {
     }
 
     public void createDoctor(Doctor doctor){
-        String sql_query = "INSERT INTO doctor (id,name,qualification,department,fees,phone) VALUES (?,?,?,?,?)";
+        String sql_query = "INSERT INTO doctor (doctorname,qualification,department,fees,phone) VALUES (?,?,?,?,?)";
         jdbcTemplate.update(sql_query,
-                doctor.getDoctorId(),
                 doctor.getDoctorName(),
                 doctor.getDoctorQualification(),
                 doctor.getDoctorDepartment(),
