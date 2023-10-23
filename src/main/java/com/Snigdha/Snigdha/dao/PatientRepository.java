@@ -28,7 +28,7 @@ public class PatientRepository {
     }
 
     public void createPatient(Patient patient){
-        String sql_query = "INSERT INTO patient (name,dob,blood,phone) VALUES (?,?,?,?,)";
+        String sql_query = "INSERT INTO patient (patientname,dob,blood,phone) VALUES (?,?,?,?)";
         jdbcTemplate.update(sql_query,
                 patient.getPatientName(),
                 patient.getPatientDob(),

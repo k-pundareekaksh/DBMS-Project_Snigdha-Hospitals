@@ -1,6 +1,6 @@
 package com.Snigdha.Snigdha.models;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Patient {
 
@@ -20,11 +20,11 @@ public class Patient {
         this.patientName = patientName;
     }
 
-    public Date getPatientDob() {
+    public LocalDate getPatientDob() {
         return patientDob;
     }
 
-    public void setPatientDob(Date patientDob) {
+    public void setPatientDob(LocalDate patientDob) {
         this.patientDob = patientDob;
     }
 
@@ -46,11 +46,11 @@ public class Patient {
 
     private int patientId;
     private String patientName;
-    private Date patientDob;
+    private LocalDate patientDob;
     private String patientBlood;
     private Long patientPhone;
 
-    public Patient(int id,String name,Date dob,String blood,Long phone){
+    public Patient(int id,String name,LocalDate dob,String blood,Long phone){
         this.patientId=id;
         this.patientName=name;
         this.patientDob=dob;

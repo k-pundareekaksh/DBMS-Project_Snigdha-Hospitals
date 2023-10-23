@@ -5,7 +5,7 @@ import com.Snigdha.Snigdha.models.Appointment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+// import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -24,17 +24,11 @@ public class AppointmentController {
         return "appointments";
     }
 
-    @PostMapping("/addappointment")
-    public String addAppointment(Appointment appointment){
-        appointmentRepository.createAppointment(appointment);
-        return "success";
-    }
-
     @GetMapping("/addappointment")
     public String addAppointment(Model model){
         List <Appointment> appointments = appointmentRepository.projectAppointment();
         model.addAttribute("doctor",appointments);
-        return "adddoctor";
+        return "addappointment";
     }
 
     @RequestMapping(value = "/addappointment",method = RequestMethod.POST)

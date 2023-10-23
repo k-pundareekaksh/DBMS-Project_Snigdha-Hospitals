@@ -6,7 +6,8 @@
 </head>
 <body>
 <form th:action="@{/addpatient}" th:object="${patient}" method="POST">
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+    <!-- <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />  -->
+    <p>Unique ID : <input type="number" name="id"/> </p>
     <p>Name <input type="text" name="name"/> </p>
     <p>DOB <input type="date" name="dob" /> </p>
     <p>Blood Group <input type="text" name="blood" /> </p>
