@@ -47,7 +47,6 @@ public class DoctorRepository {
     public void deleteDoctor(int doctorId){
         String sql_query = "DELETE FROM doctor WHERE id = ?";
         jdbcTemplate.update(sql_query,doctorId);
-
     }
 
 }
