@@ -10,32 +10,36 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.List;
+// import java.util.List;
 
 @Controller
 public class PatientController {
 
-//
-
     @Autowired
     private PatientRepository patientRepository;
 
+    // @GetMapping("/patients")
+    // public String getPatients(Model model){
+    // patientRepository.createPatientTable();
+    // List<Patient> patients = patientRepository.projectPatients();
+    // model.addAttribute("patient",patients);
+    // return "patients";
+    // }
 
-    @GetMapping("/patients")
-    public String getPatients(Model model){
+    @GetMapping(path = "/patients") // url path
+    public String getDoctors(Model model) {
         patientRepository.createPatientTable();
-        List<Patient> patients =  patientRepository.projectPatients();
-        model.addAttribute("patient",patients);
-        return "patients";
+        model.addAttribute(/* object used in html page */"patients", patientRepository.showAllPatients());
+        return "patients"; // html page
     }
 
-    @RequestMapping(value = "/addpatient",method = RequestMethod.GET)
-    public String addPatientget(Model model){
+    @RequestMapping(value = "/addpatient", method = RequestMethod.GET)
+    public String addPatientget(Model model) {
         return "addpatient";
     }
 
-    @RequestMapping(value = "/addpatient",method = RequestMethod.POST)
-    public String addPatient(Patient patient){
+    @RequestMapping(value = "/addpatient", method = RequestMethod.POST)
+    public String addPatient(Patient patient) {
         patientRepository.createPatient(patient);
         return "success";
     }

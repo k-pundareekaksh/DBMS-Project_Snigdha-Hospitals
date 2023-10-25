@@ -50,16 +50,21 @@ public class Patient {
     private String patientBlood;
     private Long patientPhone;
 
-    public Patient(int id,String name,LocalDate dob,String blood,Long phone){
-        this.patientId=id;
-        this.patientName=name;
-        this.patientDob=dob;
-        this.patientBlood=blood;
-        this.patientPhone=phone;
+    public Patient(int id, String name, LocalDate dob, String blood, Long phone) {
+        this.patientId = id;
+        this.patientName = name;
+        this.patientDob = dob;
+        this.patientBlood = blood;
+        this.patientPhone = phone;
     }
+
+    public Patient() {
+
+    };
 
     @Override
     public String toString() {
-        return "Patient [patientId=" + patientId + ", patientName=" + patientName + ", patientDob=" + patientDob + ", patientBlood=" + patientBlood + ", patientPhone=" + patientPhone + "]";
+        return "Patient [patientId=" + patientId + ", patientName=" + patientName + ", patientDob=" + patientDob
+                + ", patientBlood=" + patientBlood + ", patientPhone=" + patientPhone + "]";
     }
 }
