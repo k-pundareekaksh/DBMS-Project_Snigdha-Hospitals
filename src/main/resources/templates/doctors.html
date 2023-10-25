@@ -6,21 +6,26 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Doctors Details</h1>
+    <br/>
 <table class="table">
     <thead>
     <tr>
-        <th scope="col"></th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Name</th>
+        <th scope="col">Qualification</th>
+        <th scope="col">Department</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Availabilty</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="doctor : ${doctors}">
-        <th th:text="${doctor.name}">1</th>
-        <th th:text="${doctor.qualification}">1</th>
-        <th th:text="${doctor.department}">1</th>
-        <th th:text="${doctor.phone}">1</th>
+        <td th:text="${doctor.doctorName}"></td>
+        <td th:text="${doctor.doctorQualification}"></td>
+        <td th:text="${doctor.doctorDepartment}"></td>
+        <td th:text="${doctor.doctorPhone}"></td>
+        <!-- <td th:text="${doctor.doctorAvailability}"></td> -->
+
     </tr>
     </tbody>
 </table>

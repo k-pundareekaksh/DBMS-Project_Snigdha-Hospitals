@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.List;
+// import java.util.List;
 
 @Controller
 public class DoctorController {
@@ -21,12 +21,19 @@ public class DoctorController {
     private DoctorRepository doctorRepository;
 
 
-    @GetMapping(path = "/doctors")
+    // @GetMapping(path = "/doctors")
+    // public List<Doctor> getDoctors(Model model){
+    //     doctorRepository.createDoctorTable();
+    //     List<Doctor> doctors =  doctorRepository.showAllDoctors();
+    //     model.addAttribute("doctors",doctors);
+    //     return doctors;
+    // }
+
+    @GetMapping(path = "/doctors") //url path
     public String getDoctors(Model model){
         doctorRepository.createDoctorTable();
-        List<Doctor> doctors =  doctorRepository.projectDoctors();
-        model.addAttribute("doctors",doctors);
-        return "doctors";
+        model.addAttribute(/*object used in html page*/"doctors",doctorRepository.showAllDoctors());
+        return "doctors"; // html page
     }
 
     @RequestMapping(value = "/adddoctor",method=RequestMethod.GET)
