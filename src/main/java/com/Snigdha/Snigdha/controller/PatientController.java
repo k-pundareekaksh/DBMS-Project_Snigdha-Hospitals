@@ -18,14 +18,6 @@ public class PatientController {
     @Autowired
     private PatientRepository patientRepository;
 
-    // @GetMapping("/patients")
-    // public String getPatients(Model model){
-    // patientRepository.createPatientTable();
-    // List<Patient> patients = patientRepository.projectPatients();
-    // model.addAttribute("patient",patients);
-    // return "patients";
-    // }
-
     @GetMapping(path = "/patients") // url path
     public String getDoctors(Model model) {
         patientRepository.createPatientTable();

@@ -28,11 +28,11 @@ public class Appointment {
         this.doctorId = doctorId;
     }
 
-    public int getPatientIllness() {
+    public String getPatientIllness() {
         return patientIllness;
     }
 
-    public void setPatientIllness(int patientIllness) {
+    public void setPatientIllness(String patientIllness) {
         this.patientIllness = patientIllness;
     }
 
@@ -55,7 +55,7 @@ public class Appointment {
     private int appointmentId;
     private int patientId;
     private int doctorId;
-    private int patientIllness;
+    private String patientIllness;
     private LocalDate dateOfAppointment;
     private String modeOfAppointment;
 }
