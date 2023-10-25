@@ -37,10 +37,6 @@
 
 </head>
 <body>
-    <h1>Doctors Details</h1>
-    <br/>
-
-
     <nav class="navflex">
         <div class="title"><a class="navitems" href="@{/}">Snighda</a></div>
     
@@ -50,7 +46,23 @@
             <a class="navitems" href="@{/appointments}">Appointments</a>
         </div>
     </nav>
-<table class="table">
+
+
+    <div class="patienttitle">
+
+        <div>
+        <h1>Doctors List</h1>
+        </div>
+    
+        <div>
+        <a href="@{/adddoctor}"><button class="addpatientbutton">Add Doctor</button></a> 
+        </div>
+    
+    </div>
+
+    <div class="table1">
+        
+    <table class="table">
     <thead>
     <tr>
         <th scope="col">Name</th>
@@ -67,14 +79,16 @@
         <td th:text="${doctor.doctorDepartment}"></td>
         <td th:text="${doctor.doctorPhone}"></td>
         
-        {% comment %} 
+        <!-- {% comment %} 
             Availabilty has to be implemented using simple string
             Eg: Mon Wed Fri 10AM - 1PM
-        {% endcomment %}
+        {% endcomment %} -->
         <!-- <td th:text="${doctor.doctorAvailability}"></td> -->  
 
     </tr>
     </tbody>
-</table>
+    </table>
+    </div>
+
 </body>
 </html>

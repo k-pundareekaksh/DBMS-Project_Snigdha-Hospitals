@@ -3,32 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>Appointments</h1>
-    <br/>
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">appointment</th>
-        <th scope="col">Appointment Date</th>
-        <th scope="col">Pateint ID</th>
-        <th scope="col">Doctor ID</th>
-        <th scope="col">Illness</th>
-        <th scope="col">Mode</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="appointment : ${appointments}">
-        <td th:text="${appointment.appointmentId}"></td>
-        <td th:text="${appointment.dateOfAppointment}"></td>
-        <td th:text="${appointment.patientId}"></td>
-        <td th:text="${appointment.doctorId}"></td>
-        <td th:text="${appointment.patientIllness}"></td>
-        <td th:text="${appointment.modeOfAppointment}"></td>
-    </tr>
-    </tbody>
-</table>
+
+    <nav class="navflex">
+        <div class="title"><a class="navitems" href="@{/}">Snighda</a></div>
+    
+        <div class="navi">
+            <a class="navitems" href="@{/doctors}">Doctors</a>
+            <a class="navitems" href="@{/patients}">Patients</a>
+            <a class="navitems" href="@{/appointments}">Appointments</a>
+        </div>
+    </nav>
+
+    <div class="patienttitle">
+
+        <div>
+        <h1>Appointments List</h1>
+        </div>
+    
+        <div>
+        <a href="@{/addappointment}"><button class="addpatientbutton">Book Appointment</button></a> 
+        </div>
+    
+        </div>
+
+    <div class="table1">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Appointment-ID</th>
+            <th scope="col">Appointment-Date</th>
+            <th scope="col">Patient-ID</th>
+            <th scope="col">Doctor-ID</th>
+            <th scope="col">Illness</th>
+            <th scope="col">Mode</th>
+            <th scope="col">Payment</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="appointment : ${appointments}">
+            <td th:text="${appointment.appointmentId}"></td>
+            <td th:text="${appointment.dateOfAppointment}"></td>
+            <td th:text="${appointment.patientId}"></td>
+            <td th:text="${appointment.doctorId}"></td>
+            <td th:text="${appointment.patientIllness}"></td>
+            <td th:text="${appointment.modeOfAppointment}"></td>
+            <td><button class="paymentbutton">Pay Now</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+    </div>
 
 </body>
 </html>
