@@ -24,7 +24,11 @@
         <td th:text="${doctor.doctorQualification}"></td>
         <td th:text="${doctor.doctorDepartment}"></td>
         <td th:text="${doctor.doctorPhone}"></td>
-        <!-- <td th:text="${doctor.doctorAvailability}"></td> -->
+        {% comment %} 
+            Availabilty has to be implemented using simple string
+            Eg: Mon Wed Fri 10AM - 1PM
+        {% endcomment %}
+        <!-- <td th:text="${doctor.doctorAvailability}"></td> -->  
 
     </tr>
     </tbody>

@@ -1,6 +1,5 @@
 package com.Snigdha.Snigdha.controller;
 
-
 import com.Snigdha.Snigdha.dao.DoctorRepository;
 import com.Snigdha.Snigdha.models.Doctor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,29 +19,20 @@ public class DoctorController {
     @Autowired
     private DoctorRepository doctorRepository;
 
-
-    // @GetMapping(path = "/doctors")
-    // public List<Doctor> getDoctors(Model model){
-    //     doctorRepository.createDoctorTable();
-    //     List<Doctor> doctors =  doctorRepository.showAllDoctors();
-    //     model.addAttribute("doctors",doctors);
-    //     return doctors;
-    // }
-
-    @GetMapping(path = "/doctors") //url path
-    public String getDoctors(Model model){
+    @GetMapping(path = "/doctors") // url path
+    public String getDoctors(Model model) {
         doctorRepository.createDoctorTable();
-        model.addAttribute(/*object used in html page*/"doctors",doctorRepository.showAllDoctors());
+        model.addAttribute(/* object used in html page */"doctors", doctorRepository.showAllDoctors());
         return "doctors"; // html page
     }
 
-    @RequestMapping(value = "/adddoctor",method=RequestMethod.GET)
-    public String addDoctors(Model model){
+    @RequestMapping(value = "/adddoctor", method = RequestMethod.GET)
+    public String addDoctors(Model model) {
         return "adddoctor";
     }
 
-    @RequestMapping(value = "/adddoctor",method = RequestMethod.POST)
-    public String addDoctor(Doctor doctor){
+    @RequestMapping(value = "/adddoctor", method = RequestMethod.POST)
+    public String addDoctor(Doctor doctor) {
         doctorRepository.createDoctor(doctor);
         return "success";
     }
