@@ -1,7 +1,8 @@
 package com.Snigdha.Snigdha.dao;
 
+import com.Snigdha.Snigdha.mapper.DoctorRowMapper;
 import com.Snigdha.Snigdha.models.Doctor;
-// import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -14,9 +15,9 @@ import java.util.List;
 @Repository
 public class DoctorRepository {
 
-//    @Autowired
-//    JdbcTemplate jdbcTemplate;
-
+    //    JdbcTemplate jdbcTemplate;
+    
+    @Autowired
     private final JdbcTemplate jdbcTemplate;
     public DoctorRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -28,9 +29,9 @@ public class DoctorRepository {
         jdbcTemplate.update(sql_query);
     }
 
-    public List<Doctor>  projectDoctors(){
+    public List<Doctor> showAllDoctors(){
         String sql_query = "SELECT * FROM doctor";
-        return jdbcTemplate.query(sql_query,new BeanPropertyRowMapper<>(Doctor.class));
+        return jdbcTemplate.query(sql_query,new DoctorRowMapper());
     }
 
     public void createDoctor(Doctor doctor){
