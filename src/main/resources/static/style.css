@@ -147,6 +147,21 @@ footer{
     border-color: #028a2b;
 }
 
+.navflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(2, 66, 2);
+    color: #fff;
+    padding: 10px;
+    height: 40px;
+    top: 0px;
+}
+
+.navitems{
+    color: white;
+}
+
 .inputbutton{
     background-color: #028a2b;
     font-size: large;
