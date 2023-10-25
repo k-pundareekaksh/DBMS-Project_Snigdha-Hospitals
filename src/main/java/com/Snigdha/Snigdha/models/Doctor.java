@@ -66,6 +66,10 @@ public class Doctor {
         this.doctorPhone=phone;
     };
 
+    public Doctor(){
+
+    };
+
 
 
 }
