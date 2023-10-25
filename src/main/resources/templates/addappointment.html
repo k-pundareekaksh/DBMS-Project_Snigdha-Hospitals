@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-<form th:action="@{/addappointment}" th:object="${appointment}" method="POST">
-    <p>Appointment ID <input type="number" name="aid"></p>
-    <p>Patient ID <input type="number" name="pid"/> </p>
-    <p>Doctor ID <input type="number" name="did" /> </p>
-    <p>Illness <input type="text" name="illness" /> </p>
-    <p>Date <input type="date" name="date" /> </p>
-    <p>Mode <input type="text" name="mode" /> </p>
-    <p><input type="submit" value="Add Appointment"></p>
-</form>
+    <div class="addform">
+    <form th:action="@{/addappointment}" th:object="${appointment}" method="POST">
+        <div class="inputfield"><div>Appointment ID </div> <div><input type="number" name="aid"> </div> </div>
+        <br>
+        <div class="inputfield"><div>Patient ID </div> <div><input type="number" name="pid"/> </div> </div>
+        <br>
+        <div class="inputfield"><div>Doctor ID </div> <div><input type="number" name="did" /></div> </div>
+        <br>
+        <div class="inputfield"><div>Illness </div><div><input type="text" name="illness"/> </div> </div>
+        <br>
+        <div class="inputfield"><div>Date</div> <div><input type="date" name="date" /> </div> </div>
+        <br>
+        <div class="inputfield"><div>Mode </div><div><input type="text" name="mode" /> </div> </div>
+        <br>
+        <div class="inputbuttondiv"><input class="inputbutton" type="submit" value="Add Appointment"></div>
+    </form>
+    </div>
 </body>
 </html>

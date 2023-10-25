@@ -138,6 +138,33 @@ footer{
     background-color: green;
 }
 
+.addform{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    border: solid;
+    padding: 30px;
+    border-color: #028a2b;
+}
+
+.inputbutton{
+    background-color: #028a2b;
+    font-size: large;
+    color: white;
+    margin-left: 200px;
+}
+
+.inputbuttondiv{
+    justify-self: right;
+    justify-content: right;
+}
+
+.inputfield{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .carousel img {
     transition-duration: 1s;
     margin-bottom: 2%;
