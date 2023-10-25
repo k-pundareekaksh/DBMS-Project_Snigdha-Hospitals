@@ -1,15 +1,20 @@
 package com.Snigdha.Snigdha.models;
-
-// import java.util.Date;
+import java.util.List;
 
 public class Grievance {
 
+    private int grievanceId;
+    private String grievance_ovrl;
+    private List<String> grievanceTopics;  // Use a List to store multiple selected topics
+    private String grievanceRemarks;
+    private int grievancePid;
+
     public int getGrievanceId() {
-        return grievance_id;
+        return grievanceId;
     }
 
-    public void setGrievanceId(int grievance_id) {
-        this.grievance_id = grievance_id;
+    public void setGrievanceId(int grievanceId) {
+        this.grievanceId = grievanceId;
     }
 
     public String getGrievance_Ovrl() {
@@ -20,34 +25,27 @@ public class Grievance {
         this.grievance_ovrl = grievance_ovrl;
     }
 
-    public String getGrievance_Topic() {
-        return grievance_topic;
+    public List<String> getGrievance_Topic() {
+        return grievanceTopics;
     }
 
-    public void setGrievance_Topic(String grievance_topic) {
-        this.grievance_topic = grievance_topic;
+    public void setGrievance_Topic(List<String> grievanceTopics) {
+        this.grievanceTopics = grievanceTopics;
     }
 
     public String getGrievance_Remarks() {
-        return grievance_remarks;
+        return grievanceRemarks;
     }
 
-    public void setGrievance_Remarks(String grievance_remarks) {
-        this.grievance_remarks = grievance_remarks;
+    public void setGrievance_Remarks(String grievanceRemarks) {
+        this.grievanceRemarks = grievanceRemarks;
     }
 
     public int getGrievance_Pid() {
-        return grievance_pid;
+        return grievancePid;
     }
 
-    public void setGrievance_Pid(int grievance_pid) {
-        this.grievance_pid = grievance_pid;
+    public void setGrievance_Pid(int grievancePid) {
+        this.grievancePid = grievancePid;
     }
-
-
-    private int grievance_id;
-    private String grievance_ovrl;
-    private String grievance_topic;
-    private String grievance_remarks;
-    private int grievance_pid;
 }
