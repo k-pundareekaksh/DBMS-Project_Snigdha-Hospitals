@@ -16,20 +16,20 @@
             <a class="navitems" th:href="@{/appointments}">Appointments</a>
         </div>
     </nav>
-    
+
     <div class="addform">
     <form th:action="@{/addappointment}" th:object="${appointment}" method="POST">
-        <div class="inputfield"><div>Appointment ID </div> <div><input type="number" name="aid"> </div> </div>
+        <div class="inputfield"><div>Appointment ID </div> <div><input type="number" name="appointmentId"> </div> </div>
         <br>
-        <div class="inputfield"><div>Patient ID </div> <div><input type="number" name="pid"/> </div> </div>
+        <div class="inputfield"><div>Patient ID </div> <div><input type="number" name="patientId"/> </div> </div>
         <br>
-        <div class="inputfield"><div>Doctor ID </div> <div><input type="number" name="did" /></div> </div>
+        <div class="inputfield"><div>Doctor ID </div> <div><input type="number" name="doctorId" /></div> </div>
         <br>
-        <div class="inputfield"><div>Illness </div><div><input type="text" name="illness"/> </div> </div>
+        <div class="inputfield"><div>Illness </div><div><input type="text" name="patientIllness"/> </div> </div>
         <br>
-        <div class="inputfield"><div>Date</div> <div><input type="date" name="date" /> </div> </div>
+        <div class="inputfield"><div>Date</div> <div><input type="date" name="dateOfAppointment" /> </div> </div>
         <br>
-        <div class="inputfield"><div>Mode </div><div><input type="text" name="mode" /> </div> </div>
+        <div class="inputfield"><div>Mode </div><div><input type="text" name="modeOfAppointment" /> </div> </div>
         <br>
         <div class="inputbuttondiv"><input class="inputbutton" type="submit" value="Add Appointment"></div>
     </form>

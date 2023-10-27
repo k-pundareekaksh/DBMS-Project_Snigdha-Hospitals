@@ -34,6 +34,7 @@
         <table class="table">
             <thead>
             <tr>
+                <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">DOB</th>
                 <th scope="col">Blood</th>
@@ -42,6 +43,7 @@
             </thead>
             <tbody>
             <tr th:each="patient : ${patients}">
+                <td th:text="${patient.patientId}"></td>
                 <td th:text="${patient.patientName}"></td>
                 <td th:text="${patient.patientDob}"></td>
                 <td th:text="${patient.patientBlood}"></td>

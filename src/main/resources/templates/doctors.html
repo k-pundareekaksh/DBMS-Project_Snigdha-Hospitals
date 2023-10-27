@@ -65,15 +65,16 @@
     <table class="table">
     <thead>
     <tr>
+        <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Qualification</th>
         <th scope="col">Department</th>
         <th scope="col">Phone</th>
-        <th scope="col">Availabilty</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="doctor : ${doctors}">
+        <td th:text="${doctor.doctorId}"></td>
         <td th:text="${doctor.doctorName}"></td>
         <td th:text="${doctor.doctorQualification}"></td>
         <td th:text="${doctor.doctorDepartment}"></td>

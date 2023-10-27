@@ -20,15 +20,15 @@
     <div class="addform">
 <form th:action="@{/addpatient}" th:object="${patient}" method="POST">
     <!-- <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />  -->
-    <div class="inputfield"> <div>Unique ID </div>   <div><input type="number" name="id"/> </div> </div>
+    <div class="inputfield"> <div>Unique ID </div>   <div><input type="number" name="patientId"/> </div> </div>
     <br>
-    <div class="inputfield"> <div>Name </div>        <div><input type="text" name="name"/>  </div> </div>
+    <div class="inputfield"> <div>Name </div>        <div><input type="text" name="patientName"/>  </div> </div>
     <br>
-    <div class="inputfield"> <div>DOB </div>         <div><input type="date" name="dob" /> </div> </div>
+    <div class="inputfield"> <div>DOB </div>         <div><input type="date" name="patientDob" /> </div> </div>
     <br>
-    <div class="inputfield"> <div>Blood Group </div> <div><input type="text" name="blood" /> </div> </div>
+    <div class="inputfield"> <div>Blood Group </div> <div><input type="text" name="patientBlood" /> </div> </div>
     <br>
-    <div class="inputfield"> <div>Phone </div>       <div><input type="number" name="phone" /> </div> </div>
+    <div class="inputfield"> <div>Phone </div>       <div><input type="number" name="patientPhone" /> </div> </div>
     <br>
     <div class="inputbuttondiv"><input class="inputbutton" type="submit" value="Add Patient"></p> </div>
     <br>
