@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -52,7 +55,7 @@
             <td th:text="${appointment.doctorId}"></td>
             <td th:text="${appointment.patientIllness}"></td>
             <td th:text="${appointment.modeOfAppointment}"></td>
-            <td><button class="paymentbutton">Pay Now</button></td>
+            <td><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Mth41FxEZMxjxG" async> </script> </form></td>
         </tr>
         </tbody>
     </table>
@@ -61,6 +64,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 <style>
