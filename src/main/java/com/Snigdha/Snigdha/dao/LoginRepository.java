@@ -13,7 +13,10 @@ public class LoginRepository {
         System.out.println(userLogin.getUserName());        
         System.out.println(userLogin.getPassWord());
 
-        if (!(userLogin.getUserName() == "admin") &&  !(userLogin.getPassWord() == "admin"))
+        String username = "admin";
+        String password = "admin";
+
+        if (username.equals(userLogin.getUserName()) && password.equals(userLogin.getPassWord()))
         {
             return true;
         }
