@@ -1,6 +1,6 @@
 package com.Snigdha.Snigdha.models;
 
-import java.time.java.sql.Date;
+// import java.time.java.sql.Date;
 
 public class Appointment {
 
