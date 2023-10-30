@@ -10,12 +10,12 @@ public class Login {
         this.userName = userName;
     }
 
-    public String getPassword() {
+    public String getPassWord() {
         return passWord;
     }
 
-    public void setDoctorName(String password) {
-        this.passWord = password;
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
 
