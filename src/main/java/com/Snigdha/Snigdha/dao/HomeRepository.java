@@ -14,5 +14,4 @@ public class HomeRepository {
         String sql_query = "CREATE DATABASE IF NOT EXISTS Snigdha";
         jdbcTemplate.update(sql_query);
     }
-
 }
