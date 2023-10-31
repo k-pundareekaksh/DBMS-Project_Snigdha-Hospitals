@@ -37,7 +37,8 @@
 //    }
 //}
 
-package com.Snigdha.Snigdha.controller;
+        package com.Snigdha.Snigdha.controller;
+
 
 import com.Snigdha.Snigdha.dao.GrievanceRepository;
 import com.Snigdha.Snigdha.models.Grievance;
@@ -56,7 +57,11 @@ public class GrievanceController {
 
     @GetMapping("/grievances")
     public String getGrievances(Model model) {
+
+        grievanceRepository.createGrievanceTable();
+
         grievanceRepository.createGrievanceTable(); // Ensure the table is created (You may want to move this to a separate setup method)
+
         return "addgrievance";
     }
 
@@ -65,5 +70,5 @@ public class GrievanceController {
         grievanceRepository.createGrievance(grievance);
         return "success";
     }
-}
 
+}
